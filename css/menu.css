@@ -1,0 +1,91 @@
+:root {
+    --dark: #4D443D;
+    --white: #F1EEDB;
+    --light: #a98e68;
+}
+
+.menu-section {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.salads-section {
+    background-image: url(../assets/img/salad_landscape.jpg);
+}
+
+.sbw-section {
+    background-image: url(../assets/img/sbw_landscape.jpg);
+}
+
+.smoothies-section {
+    background-image: url(../assets/img/smoothies_landscape.jpg);
+}
+
+.waffle-section {
+    background-image: url(../assets/img/waffle_landscape.jpg);
+}
+
+.juices-section {
+    background-image: url(../assets/img/juices_landscape.jpg);
+}
+
+.menu-container {
+    position: relative;
+    top: 35vh;
+    font-family: 'Bebas Neue', 'Poppins', Arial, sans-serif;
+    background-color: #ffffff;
+    width: 100%;
+    min-height: 70vh;
+    color: var(--dark);
+    margin-bottom: 35vh;
+}
+
+.menu-content {
+    max-width: 700px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.menu-container h1 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--dark);
+}
+
+.menu-container ul {
+    padding: 1rem 0;
+    list-style: none;
+    width: 80%;
+}
+
+.menu-container ul li {
+    padding: 1rem 0;
+}
+
+.menu-container ul li {
+    font-size: 1.2rem;
+}
+
+@media (orientation: portrait) {
+    .salads-section {
+        background-image: url(../assets/img/salad_portrait.jpg);
+    }
+
+    .sbw-section {
+        background-image: url(../assets/img/sbw_portrait.jpg);
+    }
+
+    .smoothies-section {
+        background-image: url(../assets/img/smoothies_portrait.jpg);
+    }
+
+    .waffle-section {
+        background-image: url(../assets/img/waffle_portrait.jpg);
+    }
+
+    .juices-section {
+        background-image: url(../assets/img/juices_portrait.jpg);
+    }
+}
