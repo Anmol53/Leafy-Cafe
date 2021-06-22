@@ -2,7 +2,6 @@
     --dark: #4d443d;
     --white: #f1eedb;
     --light: #a98e68;
-    --sliderWidth: 600px;
 }
 
 * {
@@ -93,7 +92,7 @@ header .content {
     transition: 0.7s;
 }
 
-.home-background header .content {
+.home header .content {
     background-color: rgb(77, 67, 60, 0.7);
 }
 
@@ -174,8 +173,11 @@ nav {
 .hero {
     position: absolute;
     top: 12vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
     margin: 12%;
-    width: var(--sliderWidth);
+    width: 600px;
 }
 
 .quote {
@@ -263,10 +265,6 @@ section {}
 }
 
 @media screen and (max-width: 768px) {
-    :root {
-        --sliderWidth: 80vw;
-    }
-
     body {
         overflow-x: hidden;
         width: 100%;
@@ -316,6 +314,11 @@ section {}
 
     .trigger .line3 {
         transform: rotate(-45deg) translate(0px, -6px);
+    }
+
+    .hero {
+        width: 80vw;
+        margin: 12% auto;
     }
 }
 
