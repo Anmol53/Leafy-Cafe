@@ -1,4 +1,20 @@
+const scriptPath = document.currentScript.src.replace('index.js', '');
+
 // document.addEventListener('DOMContentLoaded', init);
+
+const navSlide = () => {
+    const ham = document.querySelector('.ham');
+    const nav = document.querySelector('.nav-links');
+    const links = document.querySelectorAll('.nav-links li');
+
+    ham.addEventListener('click', () => {
+        nav.classList.toggle('nav-active');
+        links.forEach((link, idx) => {
+            link.style.animation = link.style.animation ? '' : `fade 0.5s ease-in forwards ${idx / 6 + 0.5}s`;
+        });
+        ham.classList.toggle('trigger');
+    });
+}
 
 
 
@@ -19,7 +35,6 @@ const slideText = () => {
 
 const heroBG = (numberOfBGs) => {
     const bg = document.querySelector('.home-background');
-    console.log(bg);
     let i = 0;
     bg.classList.add(`background${i}`);
     setInterval(() => {
@@ -40,7 +55,7 @@ const heroBG = (numberOfBGs) => {
         video.muted = true;
         video.loop = true;
         const source = document.createElement('source');
-        source.src = `./assets/videos/video_360_c.mp4`;
+        source.src = `${scriptPath}../assets/videos/video_360_c.mp4`;
         source.type = 'video/mp4';
         video.appendChild(source);
         video.load();
@@ -50,9 +65,56 @@ const heroBG = (numberOfBGs) => {
     }
 }
 
+const loadMenu = () => {
+    fetch(`${scriptPath}../data/menu.json`)
+        .then(response => response.json())
+        .then(menu => {
+            menu.forEach(category => {
+                const {
+                    title,
+                    abbreviation: abbr,
+                    emoji,
+                    items
+                } = category;
+                const menuContent = document.querySelector(`.${abbr}-section > .menu-container > .menu-content`);
+                const contentHeading = document.createElement('h1');
+                contentHeading.innerHTML = `${title} <span>${emoji}</span>`;
+                menuContent.appendChild(contentHeading);
+                const list = document.createElement('ul');
+                items.forEach(item => {
+                    const listItem = document.createElement('li');
+                    const itemTitle = document.createElement('h2');
+                    itemTitle.innerText = item.title;
+                    const itemDescription = document.createElement('p');
+                    itemDescription.innerText = item.description;
+                    listItem.appendChild(itemTitle);
+                    listItem.appendChild(itemDescription);
+                    list.appendChild(listItem);
+                });
+                menuContent.appendChild(list);
+            });
+        })
+        .catch(err => console.log(err));
+}
 
-slideText();
-heroBG(4);
+const executeHomeFunctions = () => {
+    navSlide();
+    slideText();
+    heroBG(4);
+}
 
-// (init() => {
-// })();
+const executeMenuFunctions = () => {
+    navSlide();
+    loadMenu();
+}
+
+
+const home = document.querySelector('body.home');
+if (home) {
+    home.onload = executeHomeFunctions;
+}
+
+const menu = document.querySelector('body.menu');
+if (menu) {
+    menu.onload = executeMenuFunctions;
+}
