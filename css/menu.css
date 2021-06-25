@@ -4,24 +4,6 @@
     --light: #a98e68;
 }
 
-.menu-background {
-    background-image: url(../assets/img/texture-light.jpg);
-}
-
-.menu .hero {
-    font-family: 'Bebas Neue', 'Poppins', Arial, sans-serif;
-    color: var(--dark);
-    margin: 15%;
-}
-
-.menu .hero h1 {
-    font-size: 5rem;
-}
-
-.menu .hero h2 {
-    font-size: 1.5rem;
-}
-
 .menu-section {
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -105,11 +87,5 @@
 
     .juices-section {
         background-image: url(../assets/img/juices_portrait.jpg);
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .menu .hero {
-        margin: 12% auto;
     }
 }

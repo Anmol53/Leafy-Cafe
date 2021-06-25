@@ -52,6 +52,13 @@ header {
     width: 100vw;
     height: 100vh;
     position: relative;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 1);
+}
+
+.page header {
+    height: 85vh;
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 header .background,
@@ -67,6 +74,10 @@ header .content {
 .background {
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.sub-background {
+    background-image: url(../assets/img/texture-light.jpg);
 }
 
 .background0 {
@@ -198,6 +209,20 @@ nav {
     margin: 10px 0;
 }
 
+.page .hero {
+    font-family: 'Bebas Neue', 'Poppins', Arial, sans-serif;
+    color: var(--dark);
+    margin: 10% 15%;
+}
+
+.page .hero h1 {
+    font-size: 5rem;
+}
+
+.page .hero h2 {
+    font-size: 1.5rem;
+}
+
 section {}
 
 .section_odd {
@@ -270,6 +295,10 @@ section {}
         width: 100%;
     }
 
+    .page header {
+        height: 100vh;
+    }
+
     .ham {
         display: block;
     }
@@ -318,6 +347,10 @@ section {}
 
     .hero {
         width: 80vw;
+        margin: 12% auto;
+    }
+
+    .page .hero {
         margin: 12% auto;
     }
 }

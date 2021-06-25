@@ -97,6 +97,85 @@ const loadMenu = () => {
         .catch(err => console.log(err));
 }
 
+function initMap() {
+    fetch(`${scriptPath}../data/map_styles.json`)
+        .then(response => response.json())
+        .then(styles => {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                center: {
+                    lat: 23.221787856849705,
+                    lng: 77.43922306318788
+                },
+                // mapId: 'eaa3f8762d750c2d',
+                scrollwheel: 0,
+                scaleControl: 1,
+                draggable: 1,
+                panControl: 1,
+                streetViewControl: 0,
+                mapTypeControl: false,
+                styles: styles['light']
+            });
+            const markersData = [{
+                    title: "Hoshangabad Road",
+                    lat: 23.181604802533037,
+                    lng: 77.45629591969394,
+                    address: "Shop No.: 6, A Block, Surendra Landmark"
+                },
+                {
+                    title: "Kolar Road",
+                    lat: 23.183796997510427,
+                    lng: 77.41750618416212,
+                    address: "No 03, Mandakini Housing Society"
+                },
+                {
+                    title: "MP Nagar",
+                    lat: 23.232993449309767,
+                    lng: 77.43153937710215,
+                    address: "R-53, In front of DB City - Mall, Zone-II"
+                },
+                {
+                    title: "Indrapuri",
+                    lat: 23.250368282790006,
+                    lng: 77.46591135356374,
+                    address: "Service Rd, Jubali Gate, Sector C"
+                },
+                {
+                    title: "New Market",
+                    lat: 23.2328422837375,
+                    lng: 77.40377246508328,
+                    address: "Unit no. SA 101, A wing, Shrishti C.B.D, Gammon Square"
+                }
+            ];
+            const i = new google.maps.LatLngBounds();
+            const r = new google.maps.InfoWindow();
+            markersData.forEach((markerData, idx) => {
+                const position = new google.maps.LatLng(markerData.lat, markerData.lng);
+                i.extend(position);
+                const marker = new google.maps.Marker({
+                    position,
+                    map,
+                    title: markerData.title,
+                    icon: `${scriptPath}../assets/img/pin_light_small.png`
+                });
+                google.maps.event.addListener(
+                    marker,
+                    "click",
+                    (function(e, t) {
+                        return function() {
+                            r.setContent(`<div>${t.title}</div><span>${t.address}</span>`);
+                            r.open(map, e);
+                        };
+                    })(marker, markerData));
+                map.fitBounds(i);
+            });
+
+            const p = google.maps.event.addListener(map, "bounds_changed", function() {
+                this.setZoom(13.2);
+                google.maps.event.removeListener(p);
+            });
+        });
+}
+
 const executeHomeFunctions = () => {
     navSlide();
     slideText();
@@ -108,6 +187,10 @@ const executeMenuFunctions = () => {
     loadMenu();
 }
 
+const executeContactFunctions = () => {
+    navSlide();
+}
+
 
 const home = document.querySelector('body.home');
 if (home) {
@@ -117,4 +200,9 @@ if (home) {
 const menu = document.querySelector('body.menu');
 if (menu) {
     menu.onload = executeMenuFunctions;
+}
+
+const contact = document.querySelector('body.contact');
+if (contact) {
+    contact.onload = executeContactFunctions;
 }

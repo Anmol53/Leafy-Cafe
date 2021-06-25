@@ -1,0 +1,11 @@
+#map {
+    height: 85vh;
+}
+
+.contact-section {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: white;
+    height: 85vh;
+}
