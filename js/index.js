@@ -177,19 +177,16 @@ function initMap() {
 }
 
 const executeHomeFunctions = () => {
-    navSlide();
     slideText();
     heroBG(4);
 }
 
 const executeMenuFunctions = () => {
-    navSlide();
     loadMenu();
 }
 
-const executeContactFunctions = () => {
-    navSlide();
-}
+const executeContactFunctions = () => {}
+
 
 
 const home = document.querySelector('body.home');
@@ -206,3 +203,13 @@ const contact = document.querySelector('body.contact');
 if (contact) {
     contact.onload = executeContactFunctions;
 }
+
+if (document.querySelector('.ham')) {
+    navSlide()
+};
+
+
+setTimeout(function() {
+    const es = document.querySelector('a.eapps-link');
+    es.remove();
+}, 2000);
