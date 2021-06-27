@@ -292,19 +292,10 @@ nav {
 /* ********** Footer Styling Start ********** */
 footer {
     width: 100%;
-    background-image: url('../assets/img/footer.jpg');
+    background-color: rgb(77, 67, 60, 0.5);
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Bebas Neue', 'Poppins', Arial, sans-serif;
-    /* background:
-        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px; */
 }
 
 footer .footer-main {
@@ -453,10 +444,6 @@ footer .copyright a {
 
     .background3 {
         background-image: url(../assets/img/background_portrait3.jpg);
-    }
-
-    footer {
-        background-image: url('../assets/img/footer_portrait.jpg');
     }
 }
 
