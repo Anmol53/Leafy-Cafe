@@ -406,6 +406,10 @@ footer .copyright a {
     .background3 {
         background-image: url(../assets/img/background_portrait3.jpg);
     }
+
+    footer {
+        background-image: url('../assets/img/footer_portrait.jpg');
+    }
 }
 
 @media screen and (max-width: 1024px) {
