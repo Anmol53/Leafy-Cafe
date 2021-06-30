@@ -1,9 +1,3 @@
-:root {
-    --dark: #4D443D;
-    --white: #F1EEDB;
-    --light: #a98e68;
-}
-
 .menu-section {
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -33,7 +27,6 @@
 .menu-container {
     position: relative;
     top: 50vh;
-    font-family: 'Bebas Neue', 'Poppins', Arial, sans-serif;
     background-color: #ffffff;
     width: 100%;
     min-height: 70vh;
@@ -47,24 +40,13 @@
     margin: 0 auto;
 }
 
-.menu-content h1 {
-    font-size: 2.5rem;
-    padding: 1rem 0;
-    text-transform: uppercase;
-    border-bottom: 2px solid var(--dark);
-}
-
 .menu-content ul {
-    padding: 1rem 0;
     list-style: none;
     width: 80%;
 }
 
 .menu-content ul li {
     padding: 1rem 0;
-}
-
-.menu-content ul li {
     font-size: 1.2rem;
 }
 

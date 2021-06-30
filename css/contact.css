@@ -1,75 +1,24 @@
-#map {
+body.contact #map {
     height: 85vh;
 }
 
-.contact-section {
-    background-color: white;
-}
-
-.address-section {
-    display: grid;
-    font-family: 'Bebas Neue', 'Poppins', Arial, sans-serif;
-    grid-template-columns: 6fr 5fr;
-    color: var(--dark);
-    padding: 5rem 10%;
-}
-
-.address-section .content h1 {
-    font-size: 2.5rem;
-    border-bottom: 2px solid var(--dark);
-    padding: 1rem 0;
-}
-
-.address-section .content ul {
+body.contact .locations ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 1rem 0;
+    list-style: none;
 }
 
-.address-section .content ul li {
+body.contact .locations ul li {
     flex: 0 1 250px;
-    list-style: none;
     font-size: 1.2rem;
     padding: 1rem 2rem 1rem 0rem;
 }
 
-.address-section .content ul li img {
+body.contact .locations ul li img {
     width: 3rem;
 }
 
-.address-section .content>p {
-    padding: 1rem 0 0;
-    font-size: 1.2rem;
-}
-
-.address-section .content>a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: var(--light)
-}
-
-.address-section .image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.address-section .image img {
-    max-width: 90%;
-}
-
-.address-section .image img.fresh {
-    width: 200px;
-}
-
-@media screen and (max-width: 768px) {
-    .address-section {
-        grid-template-columns: 1fr;
-    }
-
-    .address-section .image {
-        display: none;
-    }
+body.contact .section-with-image-at-right .image img.fresh {
+    max-width: 200px;
 }

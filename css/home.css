@@ -1,0 +1,103 @@
+.home header {
+    height: 100vh;
+}
+
+.background0 {
+    background-image: url(../assets/img/background_landscape0.jpg);
+}
+
+.background1 {
+    background-image: url(../assets/img/background_landscape1.jpg);
+}
+
+.background2 {
+    background-image: url(../assets/img/background_landscape2.jpg);
+}
+
+.background3 {
+    background-image: url(../assets/img/background_landscape3.jpg);
+}
+
+.header_background_video {
+    position: absolute;
+    width: 100%;
+    transition: 0.7s;
+}
+
+.home header .content {
+    background-color: rgb(77, 67, 60, 0.7);
+}
+
+.quote {
+    position: absolute;
+    transition: 0.7s;
+    opacity: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.active-quote {
+    opacity: 1;
+}
+
+.quote h1 {
+    color: var(--white);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+.section_odd {
+    height: 100vh;
+    width: 70vw;
+    background-image: url(../assets/img/texture-light.jpg);
+    margin: 5rem 0;
+    position: relative;
+    left: 0;
+}
+
+.section_even {
+    height: 100vh;
+    width: 70vw;
+    background-image: url(../assets/img/board.jpg);
+    margin: 5rem 0;
+    position: relative;
+    left: calc(100% - 70vw);
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .header_background_video {
+        height: 300%;
+        top: -100%;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .header_background_video {
+        width: 300%;
+        left: -100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header_background_video {
+        display: none;
+    }
+}
+
+@media (orientation: portrait) {
+    .background0 {
+        background-image: url(../assets/img/background_portrait0.jpg);
+    }
+
+    .background1 {
+        background-image: url(../assets/img/background_portrait1.jpg);
+    }
+
+    .background2 {
+        background-image: url(../assets/img/background_portrait2.jpg);
+    }
+
+    .background3 {
+        background-image: url(../assets/img/background_portrait3.jpg);
+    }
+}
