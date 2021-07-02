@@ -18,7 +18,3 @@ body.contact .locations ul li {
 body.contact .locations ul li img {
     width: 3rem;
 }
-
-body.contact .section-with-image-at-right .image img.fresh {
-    max-width: 200px;
-}
