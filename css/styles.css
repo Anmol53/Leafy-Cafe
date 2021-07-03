@@ -275,6 +275,51 @@ section hr {
     max-width: 200px;
 }
 
+.section-with-image-at-both-side {
+    position: relative;
+    color: white;
+}
+
+.section-with-image-at-both-side .content {
+    max-width: 60%;
+    padding: 5rem 1rem 5rem 15rem;
+}
+
+
+.section-with-image-at-both-side .content p {
+    padding: 1rem 0;
+}
+
+.section-with-image-at-both-side .content h1 {
+    font-size: 2.5rem;
+    border: none;
+    padding: 1rem 0;
+    margin: 2rem 0;
+}
+
+.section-with-image-at-both-side .image-large {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    max-width: 40%;
+    transform: translateY(-30%);
+}
+
+.section-with-image-at-both-side .image-large img {
+    width: 80%;
+}
+
+.section-with-image-at-both-side .image-small {
+    position: absolute;
+    top: 70%;
+    left: 0;
+    max-width: 10%;
+    transform: translateY(-70%);
+}
+
+.section-with-image-at-both-side .image-small img {
+    width: 80%;
+}
 
 
 /* ==========================================================================

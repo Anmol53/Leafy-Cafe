@@ -207,7 +207,8 @@ const executeAboutFunctions = () => {
 }
 
 const executePrivacyFunctions = () => {
-    parallex('.coconut', 0.09);
+    parallex('.coconut', 0.1);
+    parallex('.pumpkin', -0.1);
 }
 
 const home = document.querySelector('body.home');
