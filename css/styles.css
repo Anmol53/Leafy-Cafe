@@ -68,7 +68,6 @@ header .content {
     position: absolute;
     width: 100%;
     height: 100%;
-    overflow: hidden;
 }
 
 .background {
@@ -76,11 +75,13 @@ header .content {
     background-size: cover;
 }
 
-.background>img {
-    width: 250px;
+.background img.top {
     position: absolute;
-    right: 2rem;
-    bottom: 2rem;
+    right: 5rem;
+    top: 5rem;
+    z-index: 1;
+    height: 115%;
+    filter: drop-shadow(-15px 30px 1rem rgba(0, 0, 0, 0.7))
 }
 
 .background {
@@ -525,6 +526,10 @@ footer .copyright a {
     .hero {
         width: 80vw;
         margin: 12% auto;
+    }
+
+    .background>img {
+        display: none;
     }
 
     .section-with-image-at-right {
