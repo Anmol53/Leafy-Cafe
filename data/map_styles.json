@@ -40,7 +40,7 @@
             "featureType": "poi",
             "elementType": "all",
             "stylers": [{
-                "visibility": "off"
+                "visibility": "on"
             }]
         },
         {
@@ -53,6 +53,20 @@
                     "color": "#ded7c6"
                 }
             ]
+        },
+        {
+            "featureType": "poi.medical",
+            "elementType": "all",
+            "stylers": [{
+                "visibility": "off"
+            }]
+        },
+        {
+            "featureType": "poi.place_of_worship",
+            "elementType": "all",
+            "stylers": [{
+                "visibility": "off"
+            }]
         },
         {
             "featureType": "road",
