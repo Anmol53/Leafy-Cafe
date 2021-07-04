@@ -73,6 +73,7 @@ body.home main section .background {
     width: 75%;
     height: 80%;
     background-size: cover;
+    box-shadow: 0 0 1rem black;
 }
 
 body.home main section .left {
@@ -81,7 +82,9 @@ body.home main section .left {
 }
 
 body.home main section .right {
-    background-image: url("../assets/img/board.jpg");
+    background-image: url("../assets/img/dark-board.jpg");
+    /* filter: grayscale(0.81); */
+    filter: grayscale(0.7) brightness(0.7);
     right: 0px;
 }
 
