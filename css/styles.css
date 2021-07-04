@@ -284,6 +284,7 @@ section hr {
 .section-with-image-at-both-side .content {
     max-width: 60%;
     padding: 5rem 1rem 5rem 15rem;
+    text-shadow: 0.7rem 1rem 0.7rem rgba(0, 0, 0, 1);
 }
 
 
@@ -474,6 +475,11 @@ footer .copyright a {
         height: 100vh;
     }
 
+    header .background,
+    header .content {
+        overflow: hidden;
+    }
+
     .ham {
         display: block;
     }
@@ -536,7 +542,15 @@ footer .copyright a {
         grid-template-columns: 1fr;
     }
 
-    .section-with-image-at-right .image {
+    .section-with-image-at-both-side .content {
+        max-width: 80%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .section-with-image-at-right .image,
+    .section-with-image-at-both-side .image-large,
+    .section-with-image-at-both-side .image-small {
         display: none;
     }
 }
