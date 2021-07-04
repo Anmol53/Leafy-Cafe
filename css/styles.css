@@ -70,12 +70,12 @@ header .content {
     height: 100%;
 }
 
-.background {
+header .background {
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.background img.top {
+header .background img.top {
     position: absolute;
     right: 5rem;
     top: 5rem;
@@ -84,7 +84,7 @@ header .content {
     filter: drop-shadow(-15px 30px 1rem rgba(0, 0, 0, 0.7))
 }
 
-.background {
+header .background {
     background-image: url(../assets/img/texture-light.jpg);
 }
 
@@ -534,7 +534,7 @@ footer .copyright a {
         margin: 12% auto;
     }
 
-    .background>img {
+    header .background>img {
         display: none;
     }
 

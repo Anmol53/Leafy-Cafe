@@ -1,20 +1,21 @@
 .home header {
+    overflow: hidden;
     height: 100vh;
 }
 
-.background0 {
+header .background0 {
     background-image: url(../assets/img/background_landscape0.jpg);
 }
 
-.background1 {
+header .background1 {
     background-image: url(../assets/img/background_landscape1.jpg);
 }
 
-.background2 {
+header .background2 {
     background-image: url(../assets/img/background_landscape2.jpg);
 }
 
-.background3 {
+header .background3 {
     background-image: url(../assets/img/background_landscape3.jpg);
 }
 
@@ -46,22 +47,90 @@
     margin: 10px 0;
 }
 
-.section_odd {
-    height: 100vh;
-    width: 70vw;
-    background-image: url(../assets/img/texture-light.jpg);
-    margin: 5rem 0;
+body.home main section {
     position: relative;
-    left: 0;
+    min-height: 100vh;
+    width: 100vw;
 }
 
-.section_even {
-    height: 100vh;
-    width: 70vw;
-    background-image: url(../assets/img/board.jpg);
-    margin: 5rem 0;
-    position: relative;
-    left: calc(100% - 70vw);
+body.home main section a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body.home main section span a {
+    display: inline-block;
+    padding: 0.7rem 2rem;
+}
+
+body.home main section p a:hover {
+    text-decoration: underline;
+}
+
+body.home main section .background {
+    position: absolute;
+    top: 10%;
+    width: 75%;
+    height: 80%;
+    background-size: cover;
+}
+
+body.home main section .left {
+    background-image: url("../assets/img/texture-light.jpg");
+    left: 0px;
+}
+
+body.home main section .right {
+    background-image: url("../assets/img/board.jpg");
+    right: 0px;
+}
+
+
+body.home main section .content {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(0%, -50%);
+    height: 50%;
+    color: var(--dark);
+    width: 35%;
+}
+
+body.home main section .content h1 {
+    font-size: 5rem;
+}
+
+body.home main section .content p {
+    font-size: 1.5rem;
+}
+
+body.home main section .content span {
+    border: 2px solid var(--dark);
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--white) 50%, rgba(0, 0, 0, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+}
+
+
+body.home main section .content span:hover {
+    background-position: left bottom;
+    color: var(--dark);
+}
+
+body.home main section .dark {
+    color: var(--white);
+    text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+body.home main section .dark h1,
+body.home main section .dark span {
+    border-color: var(--white);
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -84,20 +153,47 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    body.home main section .left {
+        width: 100%;
+        height: 100%;
+        top: 0px;
+    }
+
+    body.home main section .content {
+        top: 50%;
+        left: 0%;
+        transform: translate(0%, -50%);
+        height: auto;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    body.home main section .content h1 {
+        font-size: 3rem;
+    }
+
+    body.home main section .content p {
+        font-size: 1.2rem;
+    }
+
+}
+
 @media (orientation: portrait) {
-    .background0 {
+    header .background0 {
         background-image: url(../assets/img/background_portrait0.jpg);
     }
 
-    .background1 {
+    header .background1 {
         background-image: url(../assets/img/background_portrait1.jpg);
     }
 
-    .background2 {
+    header .background2 {
         background-image: url(../assets/img/background_portrait2.jpg);
     }
 
-    .background3 {
+    header .background3 {
         background-image: url(../assets/img/background_portrait3.jpg);
     }
 }
