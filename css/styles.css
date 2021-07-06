@@ -53,6 +53,34 @@ a {
 }
 
 /* ==========================================================================
+   Common Styling
+   ========================================================================== */
+
+.right_0 {
+    right: 0 !important;
+}
+
+.left_0 {
+    left: 0 !important;
+}
+
+.top_0 {
+    top: 0 !important;
+}
+
+.bottom_0 {
+    bottom: 0 !important;
+}
+
+.flip_x {
+    transform: scaleX(-1) !important;
+}
+
+.flip_y {
+    transform: scaleY(-1) !important;
+}
+
+/* ==========================================================================
    Header Styling
    ========================================================================== */
 header {
@@ -73,6 +101,7 @@ header .content {
 header .background {
     background-repeat: no-repeat;
     background-size: cover;
+    background-image: url(../assets/img/texture-light.jpg);
 }
 
 header .background img.top {
@@ -84,8 +113,9 @@ header .background img.top {
     filter: drop-shadow(-15px 30px 1rem rgba(0, 0, 0, 0.7))
 }
 
-header .background {
-    background-image: url(../assets/img/texture-light.jpg);
+
+header .content {
+    z-index: 2;
 }
 
 /* ==========================================================================
@@ -167,7 +197,7 @@ nav {
 }
 
 /* ==========================================================================
-   Header > hero Styling
+   Header > hero Styling, Go-Down Arrow Styling
    ========================================================================== */
 .hero {
     position: absolute;
